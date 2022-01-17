@@ -1,46 +1,26 @@
-# Getting Started with Create React App
+这是一个仿小红书部分功能的移动端项目~~
+### 涉及技术点
+框架搭建：React+TypeScript
+UI组件库：Ant Design Mobile
+css样式：styled-component库
+路由管理：react-router-config(renderRoutes)
+<!-- 后面有时间用一下react-transition-group来写路由跳转的过渡动画 -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 统一代码风格
+1. 命名
+  + 每个**组件**有一个父文件夹+子文件，文件夹命名首字母大写字母，子文件命名为index 
+  + 其他文件用小驼峰命名
 
-## Available Scripts
+### 目录结构
+非page的组件写在component里面，同一类组件放在同一个文件夹中
+├──src
+|   ├──component
+|   ├──page 页面
+|   |   ├──Tabbar 
+|   |   |   ├──HomePage 主页
+|   |   |   ├──Message 消息页面
+|   |   |   ├──Mine 个人主页
+|   ├──routes存放路由
+|   |   ├──index.tsx 如果你新增了页面，可以把在这里配置
+比如说配置主页的路由，要注意，路径前缀为/tabbar/home,在子组件中进行配置，在该组件从props中取出，再用renderRoutes进行渲染；具体百度~~~
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
