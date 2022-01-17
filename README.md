@@ -24,3 +24,9 @@ css样式：styled-component库
 |   |   ├──index.tsx 如果你新增了页面，可以把在这里配置
 比如说配置主页的路由，要注意，路径前缀为/tabbar/home,在子组件中进行配置，在该组件从props中取出，再用renderRoutes进行渲染；具体百度~~~
 
+### github提交规范(忽略这个)
++ feat 新功能
++ update 更新
++ change 修改
++ fix 修补bug
+
