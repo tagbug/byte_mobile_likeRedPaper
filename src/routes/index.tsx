@@ -1,10 +1,10 @@
-import { RouteConfig } from "react-router-config";
 import { Redirect } from "react-router-dom";
+import MessageDetail from "../page/MessageDetail";
 import Search from "../page/Search";
 import Tabbar from "../page/Tabbar";
 import HomePage from "../page/Tabbar/HomePage";
 import Message from "../page/Tabbar/Message";
-import Mine from "../page/Tabbar/PersonalCenter";
+import PersonalCenter from "../page/Tabbar/PersonalCenter";
 
 const routes = [
     {
@@ -34,9 +34,14 @@ const routes = [
             {
                 path: "/tabbar/me",
                 exact: true,
-                component: Mine,
+                component: PersonalCenter,
             },
         ]
+    },
+    {
+        path: "/message/detail",
+        exact: true,
+        component: MessageDetail,
     },
     {
         path: "/search",

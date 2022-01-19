@@ -1,24 +1,11 @@
-import { Image, List } from 'antd-mobile'
+import { List } from 'antd-mobile'
+import MessageItem from './MessageItem';
 
 const MessageList = () => {
     return (
         <List>
             {users.map(user => (
-                <List.Item
-                    key={user.name}
-                    prefix={
-                        <Image
-                            src={user.avatar}
-                            style={{ borderRadius: 20 }}
-                            fit='cover'
-                            width={40}
-                            height={40}
-                        />
-                    }
-                    description={user.description}
-                >
-                    {user.name}
-                </List.Item>
+                <MessageItem key={user.name} user={user} />
             ))}
         </List>
     )
