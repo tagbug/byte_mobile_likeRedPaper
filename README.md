@@ -19,7 +19,7 @@ css样式：styled-component库
 |   |   ├──Tabbar 
 |   |   |   ├──HomePage 主页
 |   |   |   ├──Message 消息页面
-|   |   |   ├──Mine 个人主页
+|   |   |   ├──PersonalCenter 个人主页
 |   ├──routes存放路由
 |   |   ├──index.tsx 如果你新增了页面，可以把在这里配置
 比如说配置主页的路由，要注意，路径前缀为/tabbar/home,在子组件中进行配置，在该组件从props中取出，再用renderRoutes进行渲染；具体百度~~~

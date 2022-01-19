@@ -2,28 +2,20 @@ import { FC } from 'react'
 import { TabBar } from 'antd-mobile'
 import styled from 'styled-components';
 import {
-    Switch,
-    Route,
     useHistory,
     useLocation,
-    MemoryRouter as Router,
 } from 'react-router-dom'
 import {
     AppOutline,
     MessageOutline,
     UserOutline,
 } from 'antd-mobile-icons'
-import HomePage from './HomePage';
-import Message from './Message';
-import PersonalCenter from './PersonalCenter';
 import { renderRoutes } from 'react-router-config';
-import routes from '../../routes';
 
 const Bottom: FC = () => {
     const history = useHistory()
     const location = useLocation()
     const { pathname } = location
-    console.log(pathname);
 
     const setRouteActive = (value: string) => {
         history.push(value)
@@ -59,15 +51,13 @@ const Bottom: FC = () => {
 
 const Tabbar = (props: any) => {
 
-    const route = props.route; 
-    console.log(route);
-    
+    const route = props.route;
 
     return (
         <TabbarContainer>
             <div className="app">
                 <div className="body">
-                    {route && renderRoutes(route.routes)} 
+                    {route && renderRoutes(route.routes)}
                 </div>
                 <div className="bottom">
                     <Bottom />

@@ -10,7 +10,7 @@ export default memo(function Homepage() {
         history.push('/search');
     }
     const right = (
-        <div style={{ fontSize: 18 }}>
+        <div style={{ fontSize: 20 }}>
             <Space>
                 <SearchOutline onClick={goToSearch} />
             </Space>
